@@ -1,13 +1,11 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
+
 metadata:
     name: roboshop-dev
     region: us-east-1
-managednodegroups:
+managedNodeGroups:
   - name: roboshop-dev
-    instancetypes: ["t5.large","t3.mirco","t3.small","t3.medium","c5.large"]
-    desiredcapacity: 2  # by default this value is 3
+    instanceTypes: ["m5.large","t3.small", "t3.medium","c5.large"]
+    desiredCapacity: 2 #  by default this value is 3
     spot: true
-
-
-
